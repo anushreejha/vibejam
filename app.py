@@ -8,7 +8,7 @@ import os
 import logging
 import json
 
-# Set up logging
+# Logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(message)s',
@@ -18,13 +18,10 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Load environment variables
 load_dotenv()
-
-# Initialize Flask app
 app = Flask(__name__)
 
-# Initialize Spotify client
+
 def init_spotify():
     try:
         client_id = os.getenv('SPOTIFY_CLIENT_ID')
@@ -40,7 +37,6 @@ def init_spotify():
         )
         spotify = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
         
-        # Test the connection
         spotify.search(q='test', limit=1)
         logger.info("✓ Spotify client initialized successfully")
         return spotify
@@ -49,7 +45,6 @@ def init_spotify():
         logger.error(f"Failed to initialize Spotify client: {str(e)}")
         raise
 
-# Initialize Spotify client
 try:
     sp = init_spotify()
 except Exception as e:

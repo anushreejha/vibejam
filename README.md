@@ -1,4 +1,4 @@
-# VibeJam 🎵
+# VibeJam 
 
 VibeJam is an AI-powered music recommendation system that helps you discover new music using Spotify's extensive library. It uses a sophisticated 4-tier recommendation strategy to find songs that match your musical taste.
 
@@ -7,7 +7,6 @@ VibeJam is an AI-powered music recommendation system that helps you discover new
 - **Smart Song Search**: Easily search for any song in Spotify's library
 - **4-Tier Recommendation System**: Get highly accurate song recommendations
 - **Preview Support**: Listen to 30-second previews of recommended songs
-- **Beautiful UI**: Modern, responsive interface with a purple theme
 - **Detailed Insights**: See similarity scores and recommendation reasons
 
 ## How It Works
@@ -34,8 +33,8 @@ VibeJam uses a 4-tier recommendation strategy to find the perfect songs for you:
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
-   cd music
+   git clone https://github.com/anushreejha/vibejam
+   cd vibejam
    ```
 
 2. **Set Up Virtual Environment**
@@ -76,18 +75,3 @@ VibeJam uses a 4-tier recommendation strategy to find the perfect songs for you:
    - Similarity scores
    - Recommendation reasons
    - 30-second previews (when available)
-
-## Dependencies
-
-- Flask: Web framework
-- Spotipy: Spotify API wrapper
-- Python-dotenv: Environment variable management
-- Other dependencies listed in `requirements.txt`
-
-## Contributing
-
-Feel free to open issues and submit pull requests to help improve VibeJam!
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.

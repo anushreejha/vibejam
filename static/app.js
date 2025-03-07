@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const recommendationsList = document.getElementById('recommendationsList');
     const loadingSpinner = document.getElementById('loadingSpinner');
 
-    // Search functionality
+    // Search logic
     async function searchSongs() {
         const query = searchInput.value.trim();
         if (!query) {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
 
-        // Add click listeners to song cards
+        // Click listeners for song cards
         document.querySelectorAll('.song-card').forEach(card => {
             card.addEventListener('click', () => {
                 const trackId = card.dataset.trackId;
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayRecommendations(recommendations) {
         console.log('Displaying recommendations:', recommendations);
         
-        // Create the recommendation cards with enhanced info
+        // Create recommendation cards with enhanced info
         const recommendationsHTML = recommendations.map(song => `
             <div class="col-md-6 mb-3">
                 <div class="recommendation-card">
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
         
-        // Update the content and show the section
+        // Update content and show the section
         recommendationsList.innerHTML = recommendationsHTML;
         recommendationsSection.style.display = 'block';
         
